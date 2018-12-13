@@ -1,0 +1,7 @@
+.table_bids {
+  color: var(--bid-color);
+}
+
+.table_asks {
+  color: var(--ask-color);
+}

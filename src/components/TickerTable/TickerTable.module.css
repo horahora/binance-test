@@ -1,0 +1,11 @@
+
+.ticker_table_header {
+  color: #999;
+  font-weight: normal;
+  text-transform: initial;
+}
+
+.ticker_table_row[aria-rowindex]:hover {
+  background: rgb(253, 247, 236);
+
+}

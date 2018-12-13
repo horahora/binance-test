@@ -1,17 +1,37 @@
 {
-  "name": "play-create-react-app",
+  "name": "binance-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://www.binance.co",
   "dependencies": {
+    "axios": "^0.18.0",
+    "normalizr": "^3.3.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
+    "react-switch": "^3.0.4",
+    "react-tabs": "^2.3.0",
+    "react-virtualized": "^9.21.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "flow-bin": "^0.86.0",
+    "react-scripts": "2.1.1",
+    "react-test-renderer": "^16.6.3",
+    "redux-devtools-extension": "^2.13.7",
+    "source-map-explorer": "^1.6.0"
   },
   "scripts": {
+    "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": "react-app"
