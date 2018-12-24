@@ -6,10 +6,12 @@ import sortBy from './sortBy'
 import sortDirection from './sortDirection'
 import symbolTrade from './symbolTrade'
 
-export default combineReducers({
+const rootReducer = combineReducers({
   tickers,
   tickersWebSocketOn,
   sortBy,
   sortDirection,
   symbolTrade
 })
+
+export default rootReducer

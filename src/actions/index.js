@@ -52,3 +52,10 @@ export function tradeWebsocketMessage(symbolTrade) {
     symbolTrade
   }
 }
+
+export function pingRequested(res) {
+  return {
+    type: types.PING_REQUESTED,
+    res
+  }
+}

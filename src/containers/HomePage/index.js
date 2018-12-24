@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { tickersWebsocketOpen, tickersWebsocketMessage, tickersWebsocketClose, toggleTickersWebsocket } from '../../actions'
+import { tickersWebsocketOpen, tickersWebsocketMessage, tickersWebsocketClose, toggleTickersWebsocket, pingRequested } from '../../actions'
 import { normalize, schema } from 'normalizr'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
@@ -11,7 +11,6 @@ import styles from './HomePage.module.css'
 
 
 // import { Link } from 'react-router-dom';
-// import axios from 'axios'
 
 type Props = {
   history: *
@@ -58,14 +57,10 @@ class HomePage extends Component<Props> {
   }
 
   componentDidMount() {
-
-    // axios.get('/api/v1/ping')
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
+    const { dispatch } = this.props
+    dispatch(pingRequested())
 
     this.startWebSocket()
-
   }
 
   componentWillUnmount() {
